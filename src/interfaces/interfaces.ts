@@ -6,5 +6,6 @@ export interface IGetCities{
 export interface IGetWeather{
   weatherText:string,
   temperature:number
+  isFavorite?:boolean
 }
 

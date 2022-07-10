@@ -8,12 +8,12 @@ interface IFavoritesProps{
  }
 
 export const Favorites = (props:IFavoritesProps)=>{
-
+const {updateAvailableCities}=props
 
   useEffect(() => {
     (async ()=>{
       const response = await axios.get(`${BASE_URL}/favorites`)
-      props.updateAvailableCities(response.data)
+      updateAvailableCities(response.data)
     })()
   }, []);
 
